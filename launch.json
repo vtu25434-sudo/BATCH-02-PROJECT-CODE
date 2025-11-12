@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome - EduBot Server",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3001",
+            "webRoot": "${workspaceFolder}/MINOR project codes/data"
+        },
+        {
+            "name": "Launch Server",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/MINOR project codes/data/server.js",
+            "cwd": "${workspaceFolder}/MINOR project codes/data",
+            "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Server and Chrome",
+            "configurations": ["Launch Server", "Launch Chrome - EduBot Server"]
+        }
+    ]
+}
