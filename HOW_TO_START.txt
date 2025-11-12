@@ -1,0 +1,120 @@
+================================================================================
+                    EDUBOT - HOW TO START THE SERVER
+================================================================================
+
+PROBLEM: "localhost refused to connect" or "ERR_CONNECTION_REFUSED"
+SOLUTION: The server is not running! You need to start it first.
+
+================================================================================
+METHOD 1: EASIEST - Double-Click Batch File
+================================================================================
+
+1. Go to this folder:
+   "c:\Users\monik\OneDrive\Desktop\INDUSTRY PROJECT\MINOR project codes\data"
+
+2. Double-click: START_SERVER.bat
+
+3. Wait for the server to start (you'll see messages in the window)
+
+4. Open your browser and go to: http://localhost:3000
+
+5. Keep the command window open while using the app
+
+================================================================================
+METHOD 2: Using Command Prompt
+================================================================================
+
+1. Press Windows Key + R
+2. Type: cmd
+3. Press Enter
+4. Type these commands (one at a time):
+
+   cd "c:\Users\monik\OneDrive\Desktop\INDUSTRY PROJECT\MINOR project codes\data"
+   node server.js
+
+5. Wait for the message: "🚀 EduBot server running at http://localhost:3000"
+
+6. Open your browser and go to: http://localhost:3000
+
+7. Keep the command window open while using the app
+
+================================================================================
+METHOD 3: Using VS Code
+================================================================================
+
+1. Open VS Code
+2. Open the folder: "MINOR project codes\data"
+3. Open terminal in VS Code (Ctrl + `)
+4. Type: node server.js
+5. Press Enter
+6. Open browser to: http://localhost:3000
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+✓ Dependencies are already installed (node_modules exists)
+✓ Server code is correct (server.js is ready)
+✓ HTML file is correct (index.html is ready)
+✓ You MUST start the server before opening the browser
+✓ You MUST access via http://localhost:3000 (NOT file://)
+✓ Keep the server running while using the app
+✓ Press Ctrl+C to stop the server
+
+================================================================================
+WHAT YOU SHOULD SEE WHEN SERVER STARTS
+================================================================================
+
+📚 Loaded university dataset: [path to veltech.json]
+🚀 EduBot server running at http://localhost:3000
+📝 Open your browser and navigate to: http://localhost:3000
+⚠️  Make sure to access via http://localhost:3000, not by opening the HTML file directly!
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Error: "Port 3000 is already in use"
+→ Close the other application using port 3000
+→ Or use: set PORT=3001 && node server.js
+
+Error: "Cannot find module 'express'"
+→ Run: npm install
+
+Error: "Node.js is not installed"
+→ Download from: https://nodejs.org/
+→ Install it and restart
+
+Error: Still seeing "connection refused"
+→ Make sure server is running (check the command window)
+→ Make sure you're using http://localhost:3000 (not file://)
+→ Check if firewall is blocking the connection
+
+================================================================================
+TESTING
+================================================================================
+
+1. Start the server (see methods above)
+2. Open browser to http://localhost:3000
+3. You should see the EduBot chat interface
+4. Click "Admission Requirements" button
+5. You should see a response from the bot
+6. Try typing a question
+7. Verify responses appear correctly
+
+================================================================================
+SUCCESS INDICATORS
+================================================================================
+
+✓ Server window shows "🚀 EduBot server running"
+✓ Browser opens to chat interface (not error page)
+✓ Quick buttons work when clicked
+✓ Chat responses appear
+✓ No errors in browser console (F12)
+
+================================================================================
+
+For more help, check: README_START.md
+
+================================================================================
+

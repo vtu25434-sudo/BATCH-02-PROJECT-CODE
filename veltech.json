@@ -1,0 +1,292 @@
+{
+  "university": {
+    "name": "Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology",
+    "shortName": "Vel Tech University",
+    "type": "Private Deemed University",
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "address": "No. 42, Avadi-Vel Tech Road, Avadi, Chennai - 600062"
+    },
+    "contact": {
+      "admissionsEmail": "admissions@veltech.edu.in",
+      "phone": "+91-44-2684 1605",
+      "website": "https://www.veltech.edu.in"
+    }
+  },
+  "admissions": {
+    "ug": {
+      "eligibility": {
+        "minimumPercentage": "60% in 10+2 (PCM for Engineering)",
+        "acceptedExams": [
+          "VTUEEE",
+          "JEE Main",
+          "TNEA (as applicable)",
+          "CUET (select programs)"
+        ]
+      },
+      "application": {
+        "mode": ["Online", "Offline"],
+        "fee": "INR 950",
+        "deadlines": {
+          "early": "31 March",
+          "regular": "31 May",
+          "late": "30 June (subject to availability)"
+        }
+      }
+    },
+    "pg": {
+      "eligibility": {
+        "minimumPercentage": "50%-60% in relevant UG degree",
+        "acceptedExams": [
+          "GATE (for M.Tech)",
+          "CAT/MAT/XAT (for MBA)",
+          "VTU Entrance (select programs)"
+        ]
+      },
+      "application": {
+        "mode": ["Online"],
+        "fee": "INR 1000",
+        "deadlines": {
+          "regular": "31 July"
+        }
+      }
+    },
+    "international": {
+      "englishProficiency": ["IELTS 6.0+", "TOEFL iBT 80+"],
+      "documents": ["Passport", "Marksheets", "Sponsorship/Financial Documents"],
+      "contact": "iro@veltech.edu.in"
+    }
+  },
+  "programs": {
+    "ug": [
+      "B.Tech Computer Science and Engineering",
+      "B.Tech Artificial Intelligence and Data Science",
+      "B.Tech Electronics and Communication Engineering",
+      "B.Tech Mechanical Engineering",
+      "B.Sc Computer Science",
+      "BBA",
+      "B.Com"
+    ],
+    "pg": [
+      "M.Tech Computer Science and Engineering",
+      "MBA",
+      "MCA"
+    ],
+    "details": {
+      "B.Tech Computer Science and Engineering": {
+        "duration": "4 years",
+        "intakePerYear": 180,
+        "specializations": ["Artificial Intelligence","Data Science","Cyber Security","Networks"],
+        "overview": "Strong emphasis on practical labs, industry projects and placement support."
+      },
+      "B.Tech Artificial Intelligence and Data Science": {
+        "duration": "4 years",
+        "intakePerYear": 60,
+        "specializations": ["Machine Learning","Big Data Analytics","Computer Vision"],
+        "overview": "A focused program covering ML, statistics, and data engineering with hands-on projects."
+      },
+      "B.Tech Electronics and Communication Engineering": {
+        "duration": "4 years",
+        "intakePerYear": 120,
+        "specializations": ["VLSI","Embedded Systems","IoT"],
+        "overview": "Covers analog/digital electronics, communication systems and embedded design."
+      },
+      "M.Tech Computer Science and Engineering": {
+        "duration": "2 years",
+        "intakePerYear": 24,
+        "specializations": ["Computer Vision","Networks","Algorithms"],
+        "overview": "Research-oriented and industry-aligned masters program. GATE-qualified admissions available."
+      },
+      "MBA": {
+        "duration": "2 years",
+        "intakePerYear": 60,
+        "specializations": ["HR","Finance","Marketing","Operations"],
+        "overview": "Industry-linked MBA with internships, live projects and placement assistance."
+      }
+    }
+  },
+  "fees": {
+    "tuition": {
+      "btech": {
+        "phases": {
+          "phaseI": {
+            "label": "VTUEEE Phase I",
+            "annualTuitionBaseINR": 290000,
+            "academicCareerAdvancementFeeINR": 15000,
+            "examFeePerYearINR": 5000,
+            "annualProgrammeFeePayableINR": 310000,
+            "scholarshipSlabs": [
+              { "mpcAggregate": "95% and Above", "tuitionScholarshipPercent": 75, "annualTuitionFeeINR": 72500, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 92500, "programmeFeeSemester1INR": 51250, "programmeFeeSemester2to8INR": 46250 },
+              { "mpcAggregate": "90% to 94.9%", "tuitionScholarshipPercent": 50, "annualTuitionFeeINR": 145000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 165000, "programmeFeeSemester1INR": 87500, "programmeFeeSemester2to8INR": 82500 },
+              { "mpcAggregate": "80% to 89.9%", "tuitionScholarshipPercent": 25, "annualTuitionFeeINR": 217500, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 237500, "programmeFeeSemester1INR": 123750, "programmeFeeSemester2to8INR": 118750 },
+              { "mpcAggregate": "70% to 79.9%", "tuitionScholarshipPercent": 10, "annualTuitionFeeINR": 261000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 281000, "programmeFeeSemester1INR": 145500, "programmeFeeSemester2to8INR": 140500 },
+              { "mpcAggregate": "Full Fees", "tuitionScholarshipPercent": 0, "annualTuitionFeeINR": 290000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 310000, "programmeFeeSemester1INR": 160000, "programmeFeeSemester2to8INR": 155000 }
+            ]
+          },
+          "phaseII": {
+            "label": "VTUEEE Phase II",
+            "annualTuitionBaseINR": 310000,
+            "academicCareerAdvancementFeeINR": 15000,
+            "examFeePerYearINR": 5000,
+            "annualProgrammeFeePayableINR": 330000,
+            "scholarshipSlabs": [
+              { "mpcAggregate": "Above 95", "tuitionScholarshipPercent": 75, "annualTuitionFeeINR": 77500, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 97500, "programmeFeeSemester1INR": 53750, "programmeFeeSemester2to8INR": 48750 },
+              { "mpcAggregate": "90% to 94.9%", "tuitionScholarshipPercent": 50, "annualTuitionFeeINR": 155000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 175000, "programmeFeeSemester1INR": 92500, "programmeFeeSemester2to8INR": 87500 },
+              { "mpcAggregate": "80% to 89.9%", "tuitionScholarshipPercent": 25, "annualTuitionFeeINR": 232500, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 252500, "programmeFeeSemester1INR": 131250, "programmeFeeSemester2to8INR": 126250 },
+              { "mpcAggregate": "70% to 79.9%", "tuitionScholarshipPercent": 10, "annualTuitionFeeINR": 279000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 299000, "programmeFeeSemester1INR": 154500, "programmeFeeSemester2to8INR": 149500 },
+              { "mpcAggregate": "Full Fees", "tuitionScholarshipPercent": 0, "annualTuitionFeeINR": 310000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 330000, "programmeFeeSemester1INR": 170000, "programmeFeeSemester2to8INR": 165000 }
+            ]
+          },
+          "phaseIII": {
+            "label": "VTUEEE Phase III",
+            "annualTuitionBaseINR": 360000,
+            "academicCareerAdvancementFeeINR": 15000,
+            "examFeePerYearINR": 5000,
+            "annualProgrammeFeePayableINR": 380000,
+            "scholarshipSlabs": [
+              { "mpcAggregate": "Above 95", "tuitionScholarshipPercent": 75, "annualTuitionFeeINR": 90000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 110000, "programmeFeeSemester1INR": 60000, "programmeFeeSemester2to8INR": 55000 },
+              { "mpcAggregate": "90% to 94.9%", "tuitionScholarshipPercent": 50, "annualTuitionFeeINR": 180000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 200000, "programmeFeeSemester1INR": 105000, "programmeFeeSemester2to8INR": 100000 },
+              { "mpcAggregate": "80% to 89.9%", "tuitionScholarshipPercent": 25, "annualTuitionFeeINR": 270000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 290000, "programmeFeeSemester1INR": 150000, "programmeFeeSemester2to8INR": 145000 },
+              { "mpcAggregate": "70% to 79.9%", "tuitionScholarshipPercent": 10, "annualTuitionFeeINR": 324000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 344000, "programmeFeeSemester1INR": 177000, "programmeFeeSemester2to8INR": 172000 },
+              { "mpcAggregate": "Full Fees", "tuitionScholarshipPercent": 0, "annualTuitionFeeINR": 360000, "careerDevAndExamFeeINR": 20000, "annualProgrammeFeePayableINR": 380000, "programmeFeeSemester1INR": 195000, "programmeFeeSemester2to8INR": 190000 }
+            ]
+          }
+        },
+        "note": "Mahatma Gandhi National Merit Scholarship applicable for Phase I/II/III as per university policy. Caution deposit INR 5,000 payable once during admission and refundable at end of programme."
+      },
+      "mba": "INR 2,50,000 per year",
+      "mtech": "INR 1,50,000 per year"
+    },
+    "lateralEntryBTech": {
+      "categoryI": { "description": "CSE, CSE Allied Branches, IT", "annualTuitionINR": 115000, "academicCareerAdvancementINR": 15000, "examFeeINR": 5000, "totalPayableAnnuallyINR": 135000, "semesterProgrammeFeePayableINR": 67500 },
+      "categoryII": { "description": "Other Branches", "annualTuitionINR": 72500, "academicCareerAdvancementINR": 15000, "examFeeINR": 5000, "totalPayableAnnuallyINR": 92500, "semesterProgrammeFeePayableINR": 46250 },
+      "categoryIII": { "description": "Other Branches", "annualTuitionINR": 77500, "academicCareerAdvancementINR": 15000, "examFeeINR": 5000, "totalPayableAnnuallyINR": 97500, "semesterProgrammeFeePayableINR": 48750 },
+      "categoryIV": { "description": "Other Branches", "annualTuitionINR": 90000, "academicCareerAdvancementINR": 15000, "examFeeINR": 5000, "totalPayableAnnuallyINR": 110000, "semesterProgrammeFeePayableINR": 55000 }
+    },
+    "hostel": {
+      "boys": "INR 85,000 - 1,10,000 per year",
+      "girls": "INR 85,000 - 1,10,000 per year",
+      "note": "Hostel fees vary by room type and block. One-time caution deposit INR 5,000 refundable at the end of programme."
+    },
+    "mess": "INR 45,000 - 60,000 per year",
+    "otherFees": [
+      "Caution deposit INR 5,000 (payable once during admission; refundable)",
+      "Exam fee as applicable per semester (first attempt included in annual exam fee)",
+      "Library and lab fees as applicable"
+    ]
+  },
+  "scholarships": {
+    "merit": [
+      "VTUEEE Scholarship (based on rank)",
+      "Merit Scholarship for high 10+2 scores",
+      "JEE Main percentile-based tuition waiver"
+    ],
+    "need": [
+      "Financial assistance for eligible students",
+      "Special consideration for economically weaker sections"
+    ],
+    "sports": [
+      "Sports quota scholarships for state/national level players"
+    ]
+  },
+  "campus": {
+    "facilities": [
+      "Modern classrooms and smart labs",
+      "Central library with digital resources",
+      "Innovation and incubation centers",
+      "Wi-Fi enabled campus",
+      "Sports complex and gym",
+      "Hostels with dining facilities",
+      "Cafeterias and food courts",
+      "Medical and counseling services",
+      "On-campus entrepreneurship cell",
+      "Language and communication lab"
+    ],
+    "location": "Avadi, Chennai",
+    "transport": "Bus facilities across Chennai and nearby regions",
+    "hostels": [
+      {
+        "name": "Block A - Silver",
+        "gender": "Male",
+        "roomTypes": [
+          { "type": "Single AC", "pricePerYearINR": 110000, "amenities": ["Attached bathroom","Study table","Wardrobe","24/7 water"] },
+          { "type": "Double Non-AC", "pricePerYearINR": 85000, "amenities": ["Shared bathroom","Study table","Wardrobe"] }
+        ],
+        "distanceToAcademicKm": 0.2,
+        "capacity": 400
+      },
+      {
+        "name": "Block B - Pearl",
+        "gender": "Female",
+        "roomTypes": [
+          { "type": "Single AC", "pricePerYearINR": 110000, "amenities": ["Attached bathroom","Study table","Wardrobe","24/7 water"] },
+          { "type": "Triple Non-AC", "pricePerYearINR": 75000, "amenities": ["Shared bathroom","Bunks","Common study area"] }
+        ],
+        "distanceToAcademicKm": 0.15,
+        "capacity": 380
+      }
+    ],
+    "studentLife": {
+      "clubs": [
+        "Coding Club (ACM chapter)",
+        "Robotics Club",
+        "Drama & Cultural Society",
+        "Entrepreneurship Cell",
+        "Music and Fine Arts Club",
+        "Debating Society"
+      ],
+      "culturalEvents": [
+        { "name": "TechFest (annual)", "highlights": "Hackathons, workshops, keynote speakers" },
+        { "name": "Cultura (cultural fest)", "highlights": "Dance, music, theatre competitions" }
+      ],
+      "sports": ["Cricket","Basketball","Badminton","Athletics","Football"],
+      "studentServices": ["Career counseling","Mental health counseling","On-campus clinics","Academic tutoring"],
+      "volunteerAndOutreach": ["Community service drives","Blood donation camps"],
+      "typicalDay": "Students attend morning lectures, labs and workshops; evenings often have club activities, sports practice, or project work. Weekends feature cultural events, guest lectures and hackathons."
+    },
+    "housingPolicy": "Hostel allotment is based on availability and admission merit; priority to first-year students. Mess timings and menu are managed centrally; special dietary requests can be accommodated on request."
+  },
+  "contacts": {
+    "general": "+91-44-2684 1605",
+    "admissions": "admissions@veltech.edu.in",
+    "international": "iro@veltech.edu.in"
+  },
+  "placements": {
+    "statistics": {
+      "averagePackage": "INR 6.5 LPA",
+      "highestPackage": "INR 42 LPA",
+      "placementRate": "94%",
+      "companies": 180
+    },
+    "topCompanies": [
+      "Microsoft",
+      "Accenture",
+      "Cognizant",
+      "Infosys",
+      "TCS",
+      "HCL Technologies",
+      "Wipro",
+      "Amazon",
+      "Google",
+      "Adobe"
+    ],
+    "sectors": [
+      "IT & Software Development",
+      "Data Science & Analytics",
+      "Consulting",
+      "Finance & Banking",
+      "Automotive",
+      "Manufacturing",
+      "Electronics"
+    ],
+    "placementDrive": {
+      "timing": "July - November (for regular batch)",
+      "internships": "Available from semester 5 onwards",
+      "contact": "placements@veltech.edu.in",
+      "coordinatorPhone": "+91-44-2684-1605 Ext. 2500"
+    }
+  }
+}
+

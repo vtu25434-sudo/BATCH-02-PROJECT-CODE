@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+  <title>EduBot · Vel Tech Chennai</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          <h1>EduBot · Vel Tech Chennai</h1>
+        </div>
+        <p class="subtitle">Your AI Assistant for Vel Tech University (Chennai)</p>
+      </div>
+    </header>
+
+    <!-- Main Chat Area -->
+    <main class="chat-container">
+      <div class="chat-header">
+        <div class="bot-info">
+          <div class="bot-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="bot-details">
+            <h3>EduBot Assistant</h3>
+            <span class="status online">Online</span>
+          </div>
+        </div>
+        <button class="btn-clear" onclick="clearChat()" title="Clear Chat">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <!-- Welcome message with quick options -->
+        <div class="message bot-message">
+          <div class="message-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="message-content">
+            <div class="message-text">
+              Hello! I'm EduBot, your AI assistant for college admission and campus FAQs. How can I help you today? You can ask me about:
+            </div>
+            <div class="quick-options">
+              <button class="quick-btn" onclick="sendQuickMessage('What are the admission requirements?')">Admission Requirements</button>
+              <button class="quick-btn" onclick="sendQuickMessage('What campus facilities are available?')">Campus Facilities</button>
+              <button class="quick-btn" onclick="sendQuickMessage('How do I apply?')">Application Process</button>
+              <button class="quick-btn" onclick="sendQuickMessage('Tell me about scholarships')">Scholarships</button>
+              <button class="quick-btn fee-btn" onclick="sendQuickMessage('What is the fee structure?')">Fee Structure</button>
+              <button class="quick-btn placement-btn" onclick="sendQuickMessage('Tell me about placements')">Placements</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+          <div class="message-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="message-content">
+            <div class="typing-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="chat-input-container">
+        <div class="chat-input">
+          <input type="text" id="messageInput" placeholder="Type your question naturally..." onkeypress="handleKeyPress(event)" />
+          <button class="send-btn" onclick="sendMessage()" title="Send Message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>Popular Topics</h3>
+        <ul class="topic-list">
+          <li onclick="sendQuickMessage('What are the admission requirements?')">
+            <i class="fas fa-file-alt"></i>
+            Admission Requirements
+          </li>
+          <li onclick="sendQuickMessage('What are the application deadlines?')">
+            <i class="fas fa-calendar-alt"></i>
+            Application Deadlines
+          </li>
+          <li onclick="sendQuickMessage('What is the tuition and fees?')">
+            <i class="fas fa-dollar-sign"></i>
+            Tuition & Fees
+          </li>
+          <li onclick="sendQuickMessage('Tell me about campus housing')">
+            <i class="fas fa-home"></i>
+            Campus Housing
+          </li>
+          <li onclick="sendQuickMessage('What academic programs are available?')">
+            <i class="fas fa-book"></i>
+            Academic Programs
+          </li>
+          <li onclick="sendQuickMessage('Tell me about student life')">
+            <i class="fas fa-users"></i>
+            Student Life
+          </li>
+          <li onclick="sendQuickMessage('What is the fee structure?')">
+            <i class="fas fa-rupee-sign"></i>
+            Fee Structure
+          </li>
+          <li onclick="sendQuickMessage('Tell me about placements')">
+            <i class="fas fa-briefcase"></i>
+            Placements
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Quick Help</h3>
+        <div class="help-item">
+          <i class="fas fa-info-circle"></i>
+          <span>Type your question naturally in the chat box</span>
+        </div>
+        <div class="help-item">
+          <i class="fas fa-lightbulb"></i>
+          <span>Click on popular topics for quick answers</span>
+        </div>
+        <div class="help-item">
+          <i class="fas fa-question-circle"></i>
+          <span>EduBot can help with admissions, fees, and more</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const chatMessages = document.getElementById('chatMessages');
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  });
+
+  // Send message function
+  function sendMessage() {
+    const input = document.getElementById('messageInput');
+    const message = input.value.trim();
+    
+    if (message) {
+      displayUserMessage(message);
+      processMessage(message);
+      input.value = '';
+    }
+  }
+
+  // Send quick message
+  function sendQuickMessage(message) {
+    const input = document.getElementById('messageInput');
+    input.value = message;
+    sendMessage();
+  }
+
+  // Handle key press
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      sendMessage();
+    }
+  }
+
+  // Display user message
+  function displayUserMessage(message) {
+    const chatMessages = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message user-message';
+    
+    messageDiv.innerHTML = `
+      <div class="message-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="message-content">
+        <div class="message-text">${escapeHtml(message)}</div>
+      </div>
+    `;
+    
+    chatMessages.appendChild(messageDiv);
+    scrollToBottom();
+  }
+
+  // Process message using the Node server /api/chat endpoint (preferred)
+  async function processMessage(message) {
+    const typingIndicator = document.getElementById('typingIndicator');
+    typingIndicator.style.display = 'flex';
+    scrollToBottom();
+
+    try {
+      // POST to our Node server endpoint served from the same origin
+      const resp = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+      });
+
+  if (!resp.ok) throw new Error('Server error');
+  const json = await resp.json();
+
+  // Debug: log full server response so we can see what's returned
+  console.log('Server /api/chat response:', json);
+
+  typingIndicator.style.display = 'none';
+  // Node server returns { reply, confidence, topics }
+  // Use json.reply when available, otherwise stringify the whole object so we don't lose data
+  const replyText = (json && json.reply) ? json.reply : JSON.stringify(json, null, 2);
+  displayBotMessage({ reply: replyText });
+    } catch (err) {
+      // Fallback: try loading local veltech.json (static) if available
+      try {
+        const local = await fetch('veltech.json');
+        if (local.ok) {
+          const data = await local.json();
+          // simple keyword-based fallback for fee queries
+          const q = message.toLowerCase();
+          let reply = "Sorry, I couldn't find information about that. Try asking about admissions, fees, or programs.";
+          if (q.includes('fee') || q.includes('tuition')) {
+            if (data && data.fees) {
+              // present a short summary if available
+              const fees = data.fees;
+              if (fees.tuition && fees.tuition.btech && fees.tuition.btech.phases && fees.tuition.btech.phases.phaseI) {
+                const phaseI = fees.tuition.btech.phases.phaseI;
+                reply = `Indicative B.Tech tuition: Phase I starts at ₹${phaseI.annualTuitionBaseINR ? phaseI.annualTuitionBaseINR.toLocaleString('en-IN') : phaseI.annualTuitionBaseINR} per year.`;
+              } else if (fees.tuition && fees.tuition.btech) {
+                reply = 'Tuition varies by program. Phase I B.Tech starts around ₹2,90,000/year.';
+              } else if (fees) {
+                reply = 'Tuition varies by program. Please check the fees.json or contact admissions for exact figures.';
+              }
+            }
+          }
+
+          typingIndicator.style.display = 'none';
+          displayBotMessage({ reply });
+          return;
+        }
+      } catch (e) {
+        // ignore
+      }
+
+      typingIndicator.style.display = 'none';
+      displayBotMessage({ reply: '⚠️ Server is not running. Start it using:\nnode server.js (or set PORT and start).\nFallback: json-server --watch veltech.json --port 3000' });
+    }
+  }
+
+  // Display bot message
+  function displayBotMessage(data) {
+    const chatMessages = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message bot-message';
+    
+    const reply = data.reply || 'I apologize, but I couldn\'t process your request.';
+    
+    messageDiv.innerHTML = `
+      <div class="message-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="message-content">
+        <div class="message-text">${formatMessage(reply)}</div>
+      </div>
+    `;
+    
+    chatMessages.appendChild(messageDiv);
+    scrollToBottom();
+  }
+
+  // Format message
+  function formatMessage(message) {
+    return escapeHtml(message).replace(/\n/g, '<br>');
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function scrollToBottom() {
+    const chatMessages = document.getElementById('chatMessages');
+    setTimeout(() => {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 100);
+  }
+
+  // Clear chat
+  function clearChat() {
+    const chatMessages = document.getElementById('chatMessages');
+    chatMessages.innerHTML = `
+      <div class="message bot-message">
+        <div class="message-avatar">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="message-content">
+          <div class="message-text">
+            Hello! I'm EduBot, your AI assistant for college admission and campus FAQs. How can I help you today?
+          </div>
+        </div>
+      </div>
+    `;
+    scrollToBottom();
+  }
+</script>
+</body>
+</html>
